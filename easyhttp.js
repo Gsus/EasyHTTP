@@ -38,16 +38,34 @@ EasyHTTP.prototype.post = function (url, data, callback) {
 };
 
 // Make PUT request
-// EasyHTTP.prototype.put = function (url, data, callback) {
-//   this.http.open("PUT", url, true);
-//   this.http.setRequestHeader("Content-type", "text/json");
+EasyHTTP.prototype.put = function (url, data, callback) {
+  this.http.open("PUT", url, true);
+  this.http.setRequestHeader("Content-type", "application/json");
 
-//   this.http.onload = function () {
-//     callback(null, this.responseText);
-//     console.log(this.status);
-//   };
+  this.http.onload = function () {
+    callback(null, this.responseText);
+    console.log(this.status);
+  };
 
-//   this.http.send(JSON.stringify(data));
-// };
+  if (typeof data === "string") {
+    // If the data is already a JSON string, send it as it is
+    this.http.send(data);
+  } else {
+    // If it's a JS object, send it as a JSON string
+    this.http.send(JSON.stringify(data));
+  }
+};
 
 // Make DELETE request
+EasyHTTP.prototype.delete = function (url, callback) {
+  this.http.open("DELETE", url, true);
+  this.http.onload = function () {
+    if (this.status === 200) {
+      callback(null, "Post deleted");
+    } else {
+      callback("Error: " + this.status);
+    }
+  };
+
+  this.http.send();
+};
