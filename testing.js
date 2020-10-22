@@ -1,8 +1,9 @@
 // ======== For the record, this code is all about testing the library ======
 // === The actual library is the "easyhttp.js" file ===
 
-const http = new EasyHTTP();
+// ============== AJAX testing===========================
 
+// const http = new EasyHTTP;
 // Get posts
 // http.get("https://jsonplaceholder.typicode.com/todos/", (err, posts) => {
 //   if (err) {
@@ -84,3 +85,38 @@ const http = new EasyHTTP();
 //     console.log(response);
 //   }
 // });
+
+// =================================================
+
+
+// ================= Fetch API testing ====================
+
+// const http = new EasyHTTP;
+
+// Get users 
+// const users = 
+// http.get("https://jsonplaceholder.typicode.com/users/")
+// .then(data => console.log(data))
+// .catch(err => console.log(err))
+
+// let user = {
+//   名前: "ディオ・ブランドー",
+//   スタンド: "ザ・ワールド",
+// };
+
+// Post an user
+// http.post("https://jsonplaceholder.typicode.com/users/", user)
+// .then(response => console.log(response))
+// .catch(err => console.log(err));
+
+// Update an user
+// http.put("https://jsonplaceholder.typicode.com/users/1", user)
+// .then(updatedUser => console.log(updatedUser))
+// .catch(err => console.log(err));
+
+// Delete an user
+// http.delete("https://jsonplaceholder.typicode.com/users/1")
+// .then(message => console.log(message))
+// .catch(err => console.log(err))
+
+// ========================================================

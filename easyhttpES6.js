@@ -5,8 +5,9 @@ class EasyHTTP {
   }
 
   // Arrow functions use a "lexical this" so you have to repeat "this.http" instead of just "this" (since, it's the same initial "this")
-  // Thought about using ternary operators but for readability's sake... nah.
-  // Make GET request
+  // Also thought about using ternary operators but for readability's sake... nah.
+
+  // Make a GET request
   get(url, callback) {
     this.http.open("GET", url, true);
 
@@ -20,7 +21,8 @@ class EasyHTTP {
 
     this.http.send();
   }
-  // Make POST request
+
+  // Make a POST request
   post(url, data, callback) {
     this.http.open("POST", url, true);
     this.http.setRequestHeader("Content-type", "application/json");
@@ -38,7 +40,8 @@ class EasyHTTP {
       this.http.send(JSON.stringify(data));
     }
   }
-  // Make PUT request
+
+  // Make a PUT request
   put(url, data, callback) {
     this.http.open("PUT", url, true);
     this.http.setRequestHeader("Content-type", "application/json");
@@ -56,7 +59,8 @@ class EasyHTTP {
       this.http.send(JSON.stringify(data));
     }
   }
-  // Make DELETE request
+  
+  // Make a DELETE request
   delete(url, callback) {
     this.http.open("DELETE", url, true);
     this.http.onload = () => {
