@@ -1,3 +1,13 @@
+/**
+ * EasyHTTP Library
+ * Library for making HTTP requests
+ *
+ * @version 1.0.0
+ * @author  Jesús Sánchez Bello
+ * @license MIT
+ *
+ **/
+
 // Use AJAX to make HTTP requests
 function EasyHTTP() {
   this.http = new XMLHttpRequest();

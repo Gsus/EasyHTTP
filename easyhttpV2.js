@@ -1,3 +1,13 @@
+/**
+ * EasyHTTP Library
+ * Library for making HTTP requests
+ *
+ * @version 2.0.0
+ * @author  Jesús Sánchez Bello
+ * @license MIT
+ *
+ **/
+
 class EasyHTTP {
   // Make a GET request
   get(url) {
@@ -66,7 +76,7 @@ class EasyHTTP {
         if (!res.ok) {
           throw new Error(`Something went wrong... Status: ${res.status}`);
         } else {
-          resolve(`User deleted. Status: ${res.status}`);
+          resolve(`Successfully deleted. Status: ${res.status}`);
         }
       })
       .catch(err => reject(err))

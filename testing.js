@@ -120,3 +120,41 @@
 // .catch(err => console.log(err))
 
 // ========================================================
+
+// ===================== Async Await testing =================
+// const http = new EasyHTTP;
+
+// Get users
+// http.get("https://jsonplaceholder.typicode.com/users/")
+// .then(res => console.log(res))
+// .catch(err => console.error(err));
+
+// http.get("https://jsonplaceholder.typicode.com/users/")
+// .then(users => {
+//   console.log(users);
+//   for (let user of users) {
+//     console.log(user.name);
+//   }
+// })
+// .catch(err => console.error(err));
+
+// Data to POST/PUT
+// const data = {
+//   名前: "ディオ・ブランドー",
+//   スタンド: "ザ・ワールド",
+// };
+
+// Post an user
+// http.post("https://jsonplaceholder.typicode.com/users/", data)
+// .then(response => console.log(response))
+// .catch(err => console.error(err));
+
+// Update an user
+// http.put("https://jsonplaceholder.typicode.com/users/5", data)
+// .then(res => console.log(res))
+// .catch(err => console.error(err));
+
+// Delete an user
+// http.delete("https://jsonplaceholder.typicode.com/usrs/5")
+// .then(res => console.log(res))
+// .catch(err => console.error(err));
